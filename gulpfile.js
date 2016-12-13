@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 	notify = require("gulp-notify"),
 	copy = require('gulp-contrib-copy'),
 	cssnano = require('gulp-cssnano'),
+	nodemon = require('nodemon'),
 	del = require('del');
 
 // copy task
@@ -55,6 +56,16 @@ gulp.task('default', ['clean'], function() {
   gulp.start('sass', 'scripts', 'copy','watch', 'connectDev');
 });
 
+//gulp nodemon
+gulp.task('nodemon', function(){
+	nodemon({
+    script: 'server.js'
+  });
+});
+
+gulp.task('dev', function(){
+	gulp.start('scripts', 'copy','nodemon');
+});
 //watch task
 gulp.task('watch', function(){
 	gulp.watch('src/*.scss', ['sass']);
@@ -62,12 +73,3 @@ gulp.task('watch', function(){
 	gulp.watch('src/*.html', ['clean','scripts', 'sass', 'copy', 'connectDev']);
 	console.log('Watch task running ...');
 });
-
-
-
-
-
-
-
-
-

@@ -1,5 +1,4 @@
 <!doctype html>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Post A Tweet</title>
@@ -10,6 +9,16 @@
 <body>
 	<div class='wrapper'>
 		<h1>Post Your Tweet Below</h1>
+		<div class='form_fill'>
+			<p>Please fill below</p>
+			<form action="" method="post" enctype="multipart/form-data">
+	         	<fieldset>
+		            <label for="name">Please Tweet:</label>
+		            <input type="text" id="name" name="name" placeholder="Enter your Your tweet" />
+		            <input class='button-on' type="submit" value="Click here" />
+	         	</fieldset>
+      		</form>
+		</div>
 	</div>
 	<script type="text/javascript" src='app.js'></script>
 </body>

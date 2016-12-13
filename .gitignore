@@ -8,3 +8,4 @@ node_modules
 
 # Ignore directorires
 dest
+src/login.json

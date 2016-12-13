@@ -3,5 +3,26 @@ body {
 }
 
 .wrapper {
-	text-align: center;
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+
+	h1 {
+		text-align: center;
+	}
+	.form_fill {
+		text-align: left;
+		padding-top: 10px;
+
+		input {
+			box-sizing: border-box;
+			border: 2px solid black;
+			width: 100%;
+		}
+		.button-on{
+			box-sizing: border-box;
+			border: 2px solid red;
+			width: 50%;
+		}
+	}
 }
